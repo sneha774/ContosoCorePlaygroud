@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 
 namespace ContosoUniversity.Models
 {
@@ -7,7 +8,9 @@ namespace ContosoUniversity.Models
     {
         public int ID { get; set; }
         public string LastName { get; set; }
-        public string FirstMidName { get; set; }
+
+        [DisplayName("First Name")]
+        public string FirstName { get; set; }
         public DateTime EnrollmentDate { get; set; }
 
         public ICollection<Enrollment> Enrollments { get; set; }
